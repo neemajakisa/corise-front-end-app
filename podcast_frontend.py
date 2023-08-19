@@ -88,13 +88,13 @@ def main():
         # Display the podcast guest and their details in a side-by-side layout
         col3, col4 = st.columns([3, 7])
 
-        with col3:
-            st.subheader("Podcast Guest")
-            st.write(podcast_info['podcast_guest']['name'])
+        # with col3:
+        #     st.subheader("Podcast Guest")
+        #     st.write(podcast_info['podcast_guest']['name'])
 
-        with col4:
-            st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"]['summary'])
+        # with col4:
+        #     st.subheader("Podcast Guest Details")
+        #     st.write(podcast_info["podcast_guest"]['summary'])
 
         # Display the five key moments
         st.subheader("Key Moments")
@@ -119,7 +119,7 @@ def create_dict_from_json_files(folder_path):
 
 def process_podcast_info(url):
     f = modal.Function.lookup("corise-podcast-project", "process_podcast")
-    output = f.call(url, '/content/podcast/')
+    output = f.call(url, '/content/drive/MyDrive/LLM/podcast/')
     return output
 
 if __name__ == '__main__':
