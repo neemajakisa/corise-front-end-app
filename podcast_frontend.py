@@ -3,7 +3,23 @@ import modal
 import json
 import os
 
+def set_theme():
+    st.markdown(
+        """
+        <style>
+        body {
+            background-color: #2C001E;  /* Burgundy background color */
+            font-family: 'Arial', sans-serif;  /* Change font type */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
 def main():
+
+    set_theme()
+    
     st.title("Newsletter Dashboard")
 
     available_podcast_info = create_dict_from_json_files('.')
